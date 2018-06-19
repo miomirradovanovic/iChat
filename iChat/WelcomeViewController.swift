@@ -51,7 +51,17 @@ class WelcomeViewController: UIViewController {
     //MARK: Helper Functions
     
     func loginUser() {
-        print("logging in...")
+        ProgressHUD.show("Logging...")
+        
+        FUser.loginUserWith(email: emailTextField.text!, password: passwordTextField.text!)
+        { (error) in
+            if error != nil {
+                ProgressHUD.showError(error!.localizedDescription)
+                return
+            }
+            
+            // present the app
+        }
     }
     
     func registerUser() {
