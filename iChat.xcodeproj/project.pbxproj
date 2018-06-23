@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90CF70E47C93E61BC2111277 /* Pods_iChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36D076EF6104A2D50372C35D /* Pods_iChat.framework */; };
+		915DC35A20D970FD000138F3 /* FinishRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915DC35920D970FD000138F3 /* FinishRegistrationViewController.swift */; };
 		91FD5A4920D56F2A0030339E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FD5A4820D56F2A0030339E /* AppDelegate.swift */; };
 		91FD5A4E20D56F2A0030339E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91FD5A4C20D56F2A0030339E /* Main.storyboard */; };
 		91FD5A5020D56F2C0030339E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91FD5A4F20D56F2C0030339E /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		36D076EF6104A2D50372C35D /* Pods_iChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		915DC35920D970FD000138F3 /* FinishRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishRegistrationViewController.swift; sourceTree = "<group>"; };
 		91FD5A4520D56F2A0030339E /* iChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91FD5A4820D56F2A0030339E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91FD5A4D20D56F2A0030339E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		915DC35B20D97161000138F3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				91FD5A6220D67D500030339E /* Constants.swift */,
+				91FD5A6420D682F70030339E /* FCollectionReference.swift */,
+				91FD5A6620D685200030339E /* HelperFunctions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		915DC35C20D97195000138F3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				91FD5A6020D67CF70030339E /* FUser.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		91FD5A3C20D56F2A0030339E = {
 			isa = PBXGroup;
 			children = (
@@ -82,10 +102,9 @@
 			children = (
 				91FD5A4820D56F2A0030339E /* AppDelegate.swift */,
 				91FD5A5C20D57F5B0030339E /* WelcomeViewController.swift */,
-				91FD5A6020D67CF70030339E /* FUser.swift */,
-				91FD5A6220D67D500030339E /* Constants.swift */,
-				91FD5A6420D682F70030339E /* FCollectionReference.swift */,
-				91FD5A6620D685200030339E /* HelperFunctions.swift */,
+				915DC35920D970FD000138F3 /* FinishRegistrationViewController.swift */,
+				915DC35C20D97195000138F3 /* Classes */,
+				915DC35B20D97161000138F3 /* Helpers */,
 				91FD5A4C20D56F2A0030339E /* Main.storyboard */,
 				91FD5A4F20D56F2C0030339E /* Assets.xcassets */,
 				91FD5A5120D56F2C0030339E /* LaunchScreen.storyboard */,
@@ -261,6 +280,7 @@
 				91FD5A6520D682F70030339E /* FCollectionReference.swift in Sources */,
 				91FD5A5D20D57F5B0030339E /* WelcomeViewController.swift in Sources */,
 				91FD5A6320D67D500030339E /* Constants.swift in Sources */,
+				915DC35A20D970FD000138F3 /* FinishRegistrationViewController.swift in Sources */,
 				91FD5A6720D685200030339E /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

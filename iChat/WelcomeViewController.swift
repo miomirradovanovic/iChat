@@ -37,7 +37,11 @@ class WelcomeViewController: UIViewController {
         dismissKeyboard()
         
         if emailTextField.text != "" && passwordTextField.text != "" && repeatPasswordTextField.text != "" {
-            registerUser()
+            if passwordTextField.text == repeatPasswordTextField.text {
+                registerUser()
+            } else {
+                ProgressHUD.showError("Passwords don't match!")
+            }
         } else {
             ProgressHUD.showError("All fields are required!")
         }
@@ -60,12 +64,15 @@ class WelcomeViewController: UIViewController {
                 return
             }
             
-            // present the app
+            self.goToApp()
         }
     }
     
     func registerUser() {
-        print("register")
+        performSegue(withIdentifier: "welcomeToFinishRegistration", sender: self)
+        
+        cleanTextFields()
+        dismissKeyboard()
     }
     
     func dismissKeyboard() {
@@ -76,6 +83,32 @@ class WelcomeViewController: UIViewController {
         emailTextField.text = ""
         passwordTextField.text = ""
         repeatPasswordTextField.text = ""
+    }
+    
+    
+    //MARK: GoToApp
+    
+    func goToApp() {
+        
+        ProgressHUD.dismiss()
+        
+        cleanTextFields()
+        dismissKeyboard()
+        
+        // present app here
+        print("show the app")
+        
+    }
+    
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "welcomeToFinishRegistration" {
+            let vc = segue.destination as! FinishRegistrationViewController
+            vc.email = emailTextField.text!
+            vc.password = passwordTextField.text!
+            
+        }
     }
     
 }
