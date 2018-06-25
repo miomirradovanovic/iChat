@@ -26,13 +26,13 @@ PODS:
   - FirebaseAnalytics (5.0.1):
     - FirebaseCore (~> 5.0)
     - FirebaseInstanceID (~> 3.0)
-    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
   - FirebaseAuth (5.0.1):
     - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (5.0.3):
-    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseDatabase (5.0.1):
     - FirebaseCore (~> 5.0)
     - leveldb-library (~> 1.18)
@@ -53,7 +53,7 @@ PODS:
     - FirebaseCore (~> 5.0)
     - GTMSessionFetcher/Core (~> 1.1)
   - GoogleToolboxForMac/Defines (2.1.4)
-  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+  - GoogleToolboxForMac/NSData+zlib (2.1.4):
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - gRPC (1.12.0):
     - gRPC-RxLibrary (= 1.12.0)
@@ -113,38 +113,6 @@ DEPENDENCIES:
   - MBProgressHUD
   - ProgressHUD
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - BoringSSL
-    - DACircularProgress
-    - Firebase
-    - FirebaseAnalytics
-    - FirebaseAuth
-    - FirebaseCore
-    - FirebaseDatabase
-    - FirebaseFirestore
-    - FirebaseInstanceID
-    - FirebaseStorage
-    - GoogleToolboxForMac
-    - gRPC
-    - gRPC-Core
-    - gRPC-ProtoRPC
-    - gRPC-RxLibrary
-    - GTMSessionFetcher
-    - IDMPhotoBrowser
-    - ImagePicker
-    - IQAudioRecorderController
-    - JSQMessagesViewController
-    - JSQSystemSoundPlayer
-    - leveldb-library
-    - MBProgressHUD
-    - nanopb
-    - pop
-    - ProgressHUD
-    - Protobuf
-    - SCSiriWaveformView
-    - SDWebImage
-
 SPEC CHECKSUMS:
   BoringSSL: cf3f1793eb6e3c445c4d150456341f149c268a35
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
@@ -178,4 +146,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 7434c05ac7ded24a1ba88edeb559a470aa2495d9
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.4.0
