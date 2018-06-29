@@ -77,16 +77,16 @@ class FinishRegistrationViewController: UIViewController {
         
         if avatarImage == nil {
             imageFromInitials(firstName: nameTextField.text!, lastName: surnameTextField.text!) { (avatarInitials) in
-                let avatarIMG = avatarInitials.jpegData(compressionQuality: 0.7)
-                let avatar = avatarIMG!.base64EncodedString(options: NSData.Base64DecodingOptions(rawValue: 0))
-                
-                tempDictionary[kAVATAR] = avatar
+//                let avatarIMG = avatarInitials.jpegData(compressionQuality: 0.7)
+//                let avatar = avatarIMG!.base64EncodedString(options: NSData.Base64DecodingOptions(rawValue: 0))
+//
+//                tempDictionary[kAVATAR] = avatar
                 self.finishRegistration(withValues: tempDictionary)
             }
         } else {
 //            let avatarData = avatarImage.jpegData(compressionQuality: 0.7)
 //            let avatar = avatarData!.base64EncodedString(options: NSData.Base64DecodingOptions(rawValue: 0))
-            
+//            
 //            tempDictionary[kAVATAR] = avatar
             self.finishRegistration(withValues: tempDictionary)
         }
@@ -101,8 +101,18 @@ class FinishRegistrationViewController: UIViewController {
                 return
             }
             
-            // go to app
+            ProgressHUD.dismiss()
+            self.goToApp()
         }
+    }
+    
+    func goToApp() {
+        cleanTextFields()
+        dismissKeyboard()
+        
+        let mainView = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "mainApplication") as! UITabBarController
+        
+        self.present(mainView, animated: true, completion: nil)
     }
     
     func dismissKeyboard() {
